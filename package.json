@@ -8,9 +8,9 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "gradle:clean": "cd android && gradlew.bat clean",
-    "gradle:status": "cd android && gradlew.bat status",
-    "gradle:build": "cd android && gradlew.bat build",
+    "gradle:clean": "cd android && ./gradlew.bat clean",
+    "gradle:status": "cd android && ./gradlew.bat status",
+    "gradle:build": "cd android && ./gradlew.bat build",
     "doctor": "react-native doctor"
   },
   "dependencies": {
