@@ -1,4 +1,9 @@
 module.exports = {
-  root: true,
-  extends: '@react-native',
+  settings: {
+    'eslint-plugin-disable': {
+      paths: {
+        '@react-native': ['**/src/**'],
+      },
+    },
+  },
 };
