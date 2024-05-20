@@ -1,6 +1,6 @@
 import React from 'react';
 import { LogBox, StatusBar } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Containers from './src/containers';
 import GetStarted from './src/containers/getStarted';
@@ -12,8 +12,11 @@ LogBox.ignoreAllLogs();
 const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
+  const theme = DefaultTheme;
+  theme.colors.background = '#FFFFFF';
+
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={theme}>
       <StatusBar hidden={true} />
       <Stack.Navigator initialRouteName="initial">
         <Stack.Screen name="initial" component={Containers} options={{ headerShown: false }} />
