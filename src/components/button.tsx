@@ -20,7 +20,6 @@ const styles: any = StyleSheet.create({
   },
   btn_text_normal: {
     fontSize: 16,
-    fontWeight: 'bold',
     alignSelf: 'center',
     textTransform: 'none'
   },
