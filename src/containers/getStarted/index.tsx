@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 import { AppButton } from '../../components/button';
 import styles from './_styles';
 
@@ -9,7 +10,8 @@ const descriptions = [
   { title: 'Title Three', detail: 'Lorem ipsum dolor sit amet la maryame dor sut colondeum.' }
 ];
 
-const getStarted = () => {
+const GetStarted = () => {
+  const navigation = useNavigation();
   const [stepIndex, setStepIndex] = React.useState(0);
 
   return (
@@ -72,7 +74,14 @@ const getStarted = () => {
             style={{ width: 280, height: 52 }}
             type="primary"
             title="Lets Get Started"
-            onPress={() => setStepIndex(0)}
+            onPress={() =>
+              navigation.dispatch(
+                CommonActions.reset({
+                  index: 1,
+                  routes: [{ name: 'auth' }]
+                })
+              )
+            }
           />
         )}
       </View>
@@ -80,4 +89,4 @@ const getStarted = () => {
   );
 };
 
-export default getStarted;
+export default GetStarted;
