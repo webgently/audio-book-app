@@ -17,7 +17,7 @@ const Login = ({ toRedirect }: any) => {
           <CheckBox selected={checked} onPress={() => setChecked(!checked)} />
           <Text style={{ color: '#2E2E5D', fontSize: 14, fontWeight: 400, paddingBottom: 2 }}>Remember me</Text>
         </View>
-        <AppButton type="primary" title="Login" />
+        <AppButton type="primary" title="Login" style={{ height: 52 }} />
         <Text style={{ textAlign: 'right', color: '#F77A55', fontWeight: 'bold' }} onPress={() => toRedirect(2)}>
           Forget Password?
         </Text>
