@@ -10,12 +10,12 @@ const Register = ({ toRedirect }: any) => {
       <TextInput secureTextEntry={true} placeholder="Password" style={styles.textInput} />
       <TextInput placeholder="Date of Birth" style={styles.textInput} />
       <View style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', paddingLeft: 10 }}>
-        <Text style={{ color: '#2E2E5D' }}>By signing up, you agree to our</Text>
-        <Text style={{ color: '#F77A55', fontWeight: 600, paddingLeft: 4 }}>Terms</Text>
+        <Text style={{ color: '#2E2E5D' }}>By signing up, you agree to our&nbsp;</Text>
+        <Text style={{ color: '#F77A55', fontWeight: 600 }}>Terms</Text>
         <Text style={{ color: '#2E2E5D' }}>,</Text>
-        <Text style={{ color: '#F77A55', fontWeight: 600, paddingRight: 4 }}>Data Policy</Text>
-        <Text style={{ color: '#2E2E5D' }}>and</Text>
-        <Text style={{ color: '#F77A55', fontWeight: 600, paddingLeft: 4 }}>Cookies Policy</Text>
+        <Text style={{ color: '#F77A55', fontWeight: 600 }}>Data Policy</Text>
+        <Text style={{ color: '#2E2E5D' }}>&nbsp;and&nbsp;</Text>
+        <Text style={{ color: '#F77A55', fontWeight: 600 }}>Cookies Policy</Text>
         <Text style={{ color: '#2E2E5D' }}>.</Text>
       </View>
       <AppButton type="primary" title="Register" style={{ height: 52 }} />
