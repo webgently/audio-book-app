@@ -1,15 +1,14 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { GoogleIcon, FaceBookIcon, TwitterIcon } from '../../components/icons';
-import CheckBox from '../../components/checkbox';
-import { AppButton } from '../../components/button';
+import { AppButton, CheckBox } from '../../components';
 import styles from './_styles';
 
 const Login = ({ toRedirect }: any) => {
   const [checked, setChecked] = React.useState<boolean>(false);
 
   return (
-    <View style={styles.loginLayout}>
+    <View style={[styles.formControl, { width: '100%' }]}>
       <View style={styles.formControl}>
         <TextInput placeholder="Email" style={styles.textInput} />
         <TextInput secureTextEntry={true} placeholder="Password" style={styles.textInput} />
@@ -35,8 +34,15 @@ const Login = ({ toRedirect }: any) => {
             <TwitterIcon size={24} />
           </TouchableOpacity>
         </View>
-        <View style={styles.redirectToRegister}>
-          <Text style={{ textAlign: 'center', color: '#2E2E5D' }}>Don’t have an accoun’t ?</Text>
+        <View
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 4
+          }}>
+          <Text style={{ textAlign: 'center', color: '#2E2E5D' }}>Don’t have an accoun’t?</Text>
           <Text style={{ textAlign: 'center', color: '#F77A55', fontWeight: 'bold' }} onPress={() => toRedirect(1)}>
             Register
           </Text>
