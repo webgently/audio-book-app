@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { useNavigation, CommonActions } from '@react-navigation/native';
+import BgLayout from '../../layouts/bgLayout';
 import { AppButton } from '../../components/button';
 import styles from './_styles';
 
@@ -15,9 +16,7 @@ const GetStarted = () => {
   const [stepIndex, setStepIndex] = React.useState(0);
 
   return (
-    <View style={styles.gSLayout}>
-      <Image source={require('../../assets/images/bgitem1.png')} style={styles.gSImg1} />
-      <Image source={require('../../assets/images/bgitem2.png')} style={styles.gSImg2} />
+    <BgLayout style={styles.gSLayout}>
       <View>
         {stepIndex === 0 ? (
           <Image source={require('../../assets/images/init1.png')} style={{ width: 220 }} />
@@ -85,7 +84,7 @@ const GetStarted = () => {
           />
         )}
       </View>
-    </View>
+    </BgLayout>
   );
 };
 

@@ -8,8 +8,7 @@ export default StyleSheet.create({
     gap: 10,
     width: '100%',
     height: '100%',
-    paddingBottom: 40,
-    position: 'relative'
+    paddingBottom: 40
   },
   gSImg1: {
     position: 'absolute',
