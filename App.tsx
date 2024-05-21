@@ -6,6 +6,7 @@ import Containers from './src/containers';
 import GetStarted from './src/containers/getStarted';
 import Auth from './src/containers/auth';
 import HomePage from './src/containers/homePage';
+import Error from './src/containers/error';
 
 LogBox.ignoreAllLogs();
 
@@ -23,6 +24,7 @@ function App(): React.JSX.Element {
         <Stack.Screen name="get_started" component={GetStarted} options={{ headerShown: false }} />
         <Stack.Screen name="auth" component={Auth} options={{ headerShown: false }} />
         <Stack.Screen name="home_page" component={HomePage} options={{ headerShown: false }} />
+        <Stack.Screen name="error" component={Error} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
