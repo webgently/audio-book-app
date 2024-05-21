@@ -27,8 +27,9 @@ export default StyleSheet.create({
     paddingLeft: 10
   },
   loginLayout: {
-    display: 'flex',
-    flexDirection: 'column',
+    width: '100%'
+  },
+  registerLayout: {
     width: '100%'
   },
   formControl: {
