@@ -26,12 +26,6 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     paddingLeft: 10
   },
-  loginLayout: {
-    width: '100%'
-  },
-  registerLayout: {
-    width: '100%'
-  },
   formControl: {
     display: 'flex',
     flexDirection: 'column',
@@ -83,12 +77,5 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: '#4838D1',
     borderRadius: 8
-  },
-  redirectToRegister: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 10
   }
 });
