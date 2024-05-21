@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, TextInput } from 'react-native';
-import { AppButton } from '../../components/button';
+import { AppButton } from '../../components';
 import styles from './_styles';
 
 const Register = ({ toRedirect }: any) => {
   return (
-    <View style={[styles.registerLayout, styles.formControl]}>
+    <View style={[styles.formControl, { width: '100%' }]}>
       <TextInput placeholder="Email" style={styles.textInput} />
       <TextInput secureTextEntry={true} placeholder="Password" style={styles.textInput} />
       <TextInput placeholder="Date of Birth" style={styles.textInput} />
@@ -18,7 +18,7 @@ const Register = ({ toRedirect }: any) => {
         <Text style={{ color: '#F77A55', fontWeight: 600 }}>Cookies Policy</Text>
         <Text style={{ color: '#2E2E5D' }}>.</Text>
       </View>
-      <AppButton type="primary" title="Register" style={{ height: 52 }} />
+      <AppButton type="primary" title="Register" style={{ height: 52 }} onPress={() => toRedirect(4)} />
       <AppButton type="outline" title="Cancel" style={{ height: 52 }} onPress={() => toRedirect(0)} />
     </View>
   );
